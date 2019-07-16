@@ -5,7 +5,7 @@ print(food)
 print('1','2','3',sep='-',end='')
 print('줄 안바뀐다')
 head='언제 마쳐'
-tail='남가영'
+tail='허영욱'
 num1=1995
 num2=2019
 print('i\'m %s%s hungry'%(tail,tail))
