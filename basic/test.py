@@ -11,3 +11,4 @@ num2=2019
 print('i\'m %s%s hungry'%(tail,tail))
 print('열자리를 사용해서 소수점 이하 두자리만 출력했다! %10f'%4543.1257)
 print(f"내 이름은 {tail}이다. 나는 {num2-num1+1}살 이다 흑흑ㅠㅠ")
+
