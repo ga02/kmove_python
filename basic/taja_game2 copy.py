@@ -8,16 +8,15 @@ def sortV(x) : #받은 딕셔너리값(,)중 두번째꺼로 정렬
     return x[1]
 
 while True :
-    print('1.문제불러오기 2.타자게임 3.등수 출력 4.저장 5.등수불러오기')
+    print('1.문제불러오기 2.타자게임 3.등수 출력 4.저장 5.등수불러오기 6.문제입력')
     menu = input('메뉴를 선택하세요\n')
     
     if menu == '1' :
-        f = open('basic/test.txt','r',encoding='utf8')
-        line = f.readlines()
-        for i in line :
-            word.append(i.replace('\n',''))
+        f = open('basic/test.txt','rb',encoding='utf8')
+        w = w +pickle.ladd(f)
         f.close()
-
+    
+    
     elif menu == '2' :
         '''input("시작하시려면 엔터를 눌러주세요~!")
         t1 = time.time()
@@ -62,22 +61,18 @@ while True :
             print('%d등 %s %f초'%(num,k,v))
             num = num+1
     
-    elif menu == '4' :
-        f = open('rank.txt','w')
-        text =''
-        items = rank.items()
-        for k,v in items :
-            text = text + k+ ':' + str(v) +'\n'
-        f.writelines(text)
+    elif menu == '4' : #문제저장
+        f = open('rank.txt','wb')
+        pickle.dump(w,f)
         f.close()        
     
     elif menu == '5' :
-        f = open('rank.txt','r')
-        line =1
-        while line :
-            line = f.readline().replace('\n','')
-            if not(line=='') :
-                k,v=line.split(':')
-                rank[k] = float(v)
+        f = open('rank.txt','rb')
+        pickle.dump(w,f))
+        f.close()
+
+    elif menu == '6' :
+        word = input("문제를 입력하세요 : ")
+        w.append(word)               
     else :
         break      
